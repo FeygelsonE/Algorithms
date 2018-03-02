@@ -25,7 +25,7 @@ class QuickSort
     return array if length <= 1
     pivot = partition(array, start, length, &prc)
     sort2!(array, start, pivot - start, &prc)
-    sort2!(array, pivot + 1, length - 1 - pivot - start, &prc)
+    sort2!(array, pivot + 1, length - 1 - pivot + start, &prc)
   end
 
   def self.partition(array, start, length, &prc)
